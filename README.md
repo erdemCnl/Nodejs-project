@@ -1,98 +1,98 @@
-# LensLight Photo Blog
+# Node.js Fotoğraf Bloğu
 
-A full-featured photography blog application built with Node.js, Express, and MongoDB. Users can create accounts, upload photos, and interact with the photography community.
+Node.js, Express ve MongoDB ile oluşturulmuş kapsamlı bir fotoğraf blog uygulaması. Kullanıcılar hesap oluşturabilir, fotoğraf yükleyebilir ve fotoğraf topluluğuyla etkileşimde bulunabilirler.
 
-## Features
+## Özellikler
 
-- 📷 **Photo Management**: Upload, view, update, and delete photos
-- 👤 **User Authentication**: Register, login, and manage user profiles
-- 🔒 **Authorization**: Secure routes and content based on user permissions
-- 💾 **Cloud Storage**: Cloudinary integration for photo storage
-- 🎨 **Responsive Design**: Modern and user-friendly interface using EJS templates
+- 📷 **Fotoğraf Yönetimi**: Fotoğraf yükleme, görüntüleme, güncelleme ve silme
+- 👤 **Kullanıcı Kimlik Doğrulama**: Kullanıcı kaydı, giriş ve profil yönetimi
+- 🔒 **Yetkilendirme**: Kullanıcı izinlerine dayalı güvenli rotalar ve içerik
+- 💾 **Bulut Depolama**: Fotoğraf depolama için Cloudinary entegrasyonu
+- 🎨 **Duyarlı Tasarım**: EJS şablonları kullanarak modern ve kullanıcı dostu arayüz
 
-## Tech Stack
+## Teknoloji Yığını
 
 - **Backend**: Node.js, Express.js
-- **Database**: MongoDB with Mongoose
-- **Template Engine**: EJS
-- **Authentication**: JWT (JSON Web Tokens)
-- **File Upload**: Express-fileupload with Cloudinary integration
-- **CSS**: Custom styling with responsive design
-- **Deployment**: Ready for Heroku deployment (Procfile included)
+- **Veritabanı**: MongoDB ve Mongoose
+- **Şablon Motoru**: EJS
+- **Kimlik Doğrulama**: JWT (JSON Web Tokens)
+- **Dosya Yükleme**: Cloudinary entegrasyonlu Express-fileupload
+- **CSS**: Duyarlı tasarımlı özel stillemeler
+- **Deployment**: Heroku dağıtımı için hazır (Procfile dahil)
 
-## Project Structure
+## Proje Yapısı
 
 ```
-├── app.js                # Main application file
-├── db.js                 # Database connection setup
-├── controller/           # Application controllers
-│   ├── pageController.js # Page rendering controllers
-│   ├── photoController.js # Photo CRUD operations
-│   └── userController.js # User authentication and management
-├── middlewares/          # Custom middleware functions
-├── models/               # Database models
-│   ├── photoModel.js     # Photo schema and model
-│   └── userModel.js      # User schema and model
-├── public/               # Static assets
-├── routes/               # Application routes
-│   ├── pageRoute.js      # General page routes
-│   ├── photoRoute.js     # Photo CRUD routes
-│   └── userRoute.js      # User management routes
-└── views/                # EJS templates
-    └── partials/         # Reusable template components
+├── app.js                # Ana uygulama dosyası
+├── db.js                 # Veritabanı bağlantı kurulumu
+├── controller/           # Uygulama denetleyicileri
+│   ├── pageController.js # Sayfa render işlemleri
+│   ├── photoController.js # Fotoğraf CRUD işlemleri
+│   └── userController.js # Kullanıcı kimlik doğrulama ve yönetimi
+├── middlewares/          # Özel middleware fonksiyonları
+├── models/               # Veritabanı modelleri
+│   ├── photoModel.js     # Fotoğraf şeması ve modeli
+│   └── userModel.js      # Kullanıcı şeması ve modeli
+├── public/               # Statik dosyalar
+├── routes/               # Uygulama rotaları
+│   ├── pageRoute.js      # Genel sayfa rotaları
+│   ├── photoRoute.js     # Fotoğraf CRUD rotaları
+│   └── userRoute.js      # Kullanıcı yönetimi rotaları
+└── views/                # EJS şablonları
+    └── partials/         # Yeniden kullanılabilir şablon bileşenleri
 ```
 
-## Installation & Setup
+## Kurulum ve Yapılandırma
 
-1. Clone the repository
+1. Depoyu klonlayın
    ```
-   git clone https://github.com/erdemCnl/Nodejs-photoBlog.git
-   cd Nodejs-photoBlog
+   git clone https://github.com/erdemCnl/Nodejs-project.git
+   cd Nodejs-project
    ```
 
-2. Install dependencies
+2. Bağımlılıkları yükleyin
    ```
    npm install
    ```
 
-3. Create a `.env` file in the root directory with the following variables:
+3. Kök dizinde şu değişkenlerle bir `.env` dosyası oluşturun:
    ```
    PORT=3000
-   DB_URI=your_mongodb_connection_string
-   CLOUD_NAME=your_cloudinary_cloud_name
-   CLOUD_API_KEY=your_cloudinary_api_key
-   CLOUD_API_KEY_SECRET=your_cloudinary_api_secret
-   JWT_SECRET=your_jwt_secret
+   DB_URI=mongodb_baglanti_adresiniz
+   CLOUD_NAME=cloudinary_cloud_name
+   CLOUD_API_KEY=cloudinary_api_key
+   CLOUD_API_KEY_SECRET=cloudinary_api_secret
+   JWT_SECRET=jwt_gizli_anahtariniz
    ```
 
-4. Start the application
+4. Uygulamayı başlatın
    ```
    npm start
    ```
 
-5. For development with auto-restart:
+5. Geliştirme için otomatik yeniden başlatma ile:
    ```
    npm install -g nodemon
    nodemon app.js
    ```
 
-## Usage
+## Kullanım
 
-- Access the application at `http://localhost:3000`
-- Register a new user account
-- Login with your credentials
-- Navigate to the dashboard to upload and manage photos
-- View all photos in the gallery
-- Explore user profiles
+- Uygulamaya `http://localhost:3000` adresinden erişin
+- Yeni bir kullanıcı hesabı oluşturun
+- Kimlik bilgilerinizle giriş yapın
+- Fotoğraf yüklemek ve yönetmek için kontrol paneline gidin
+- Galerideki tüm fotoğrafları görüntüleyin
+- Kullanıcı profillerini keşfedin
 
-## Deployment
+## Dağıtım
 
-The application includes a Procfile for easy deployment to Heroku or similar platforms. Make sure to set the environment variables in your hosting platform.
+Uygulama, Heroku veya benzer platformlara kolay dağıtım için bir Procfile içerir. Hosting platformunuzda çevre değişkenlerini ayarlamayı unutmayın.
 
-## License
+## Lisans
 
-This project is open source and available under the MIT License.
+Bu proje açık kaynaklıdır ve MIT Lisansı altında kullanılabilir.
 
-## Author
+## Yazar
 
-Created by [Erdem Canli](https://github.com/erdemCnl) 
+[Erdem Canli](https://github.com/erdemCnl) tarafından oluşturulmuştur. 

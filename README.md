@@ -1,5 +1,3 @@
-# Node.js Fotoğraf Bloğu
-
 Node.js, Express ve MongoDB ile oluşturulmuş kapsamlı bir fotoğraf blog uygulaması. Kullanıcılar hesap oluşturabilir, fotoğraf yükleyebilir ve fotoğraf topluluğuyla etkileşimde bulunabilirler.
 
 ## Özellikler
